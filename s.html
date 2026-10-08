@@ -1,0 +1,780 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Alya Alfia Rahmah ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: #080808;
+            color: #f5eee3;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           BACKGROUND
+        ========================= */
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.04), transparent 25%),
+                radial-gradient(circle at 80% 70%, rgba(212,175,55,0.06), transparent 25%);
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        .stars {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: twinkle 3s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.15;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        section {
+            min-height: 100vh;
+            padding: 100px 8%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .gold {
+            color: #d6b66a;
+        }
+
+        .small-title {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #c7aa69;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(45px, 8vw, 90px);
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: clamp(35px, 6vw, 60px);
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        p {
+            line-height: 1.9;
+            color: #cfc7bc;
+            max-width: 700px;
+        }
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .btn {
+            margin-top: 35px;
+            padding: 15px 35px;
+            border: 1px solid #c7aa69;
+            color: #e7d7b1;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 13px;
+            transition: 0.4s;
+            background: transparent;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn:hover {
+            background: #c7aa69;
+            color: #080808;
+            box-shadow: 0 0 30px rgba(199,170,105,0.25);
+        }
+
+        /* =========================
+           OPENING
+        ========================= */
+
+        .opening {
+            position: relative;
+        }
+
+        .opening .date {
+            margin-top: 15px;
+            color: #a99d8c;
+            letter-spacing: 4px;
+            font-size: 13px;
+        }
+
+        .opening .intro {
+            margin-top: 25px;
+            font-size: 16px;
+        }
+
+        .scroll {
+            position: absolute;
+            bottom: 35px;
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #756f66;
+        }
+
+        /* =========================
+           BIRTHDAY
+        ========================= */
+
+        .birthday {
+            background: linear-gradient(
+                180deg,
+                #080808,
+                #0e0c09
+            );
+        }
+
+        .birthday-message {
+            margin-top: 15px;
+            font-size: 17px;
+        }
+
+        /* =========================
+           PHOTO
+        ========================= */
+
+        .gallery {
+            background: #0a0908;
+        }
+
+        .photos {
+            width: 100%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 40px;
+        }
+
+        .photo {
+            aspect-ratio: 3 / 4;
+            border: 1px solid rgba(199,170,105,0.25);
+            overflow: hidden;
+            background: #14120f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6f675c;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .photo:hover img {
+            transform: scale(1.05);
+        }
+
+        /* =========================
+           LETTER
+        ========================= */
+
+        .letter {
+            background: #0c0b0a;
+        }
+
+        .letter-box {
+            max-width: 720px;
+            padding: 50px 35px;
+            border: 1px solid rgba(199,170,105,0.25);
+            background: rgba(255,255,255,0.015);
+            box-shadow: 0 20px 70px rgba(0,0,0,0.35);
+        }
+
+        .letter-box p {
+            margin: 18px auto;
+            font-size: 16px;
+        }
+
+        .signature {
+            margin-top: 35px;
+            color: #d6b66a;
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        /* =========================
+           SECRET
+        ========================= */
+
+        .secret {
+            min-height: 80vh;
+        }
+
+        #secretMessage {
+            display: none;
+            margin-top: 35px;
+            max-width: 650px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .heart {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 35px 20px;
+            text-align: center;
+            background: #050505;
+            color: #625d55;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        /* =========================
+           MUSIC BUTTON
+        ========================= */
+
+        #musicButton {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10000;
+            padding: 12px 18px;
+            background: rgba(12, 11, 10, 0.9);
+            color: #d6b66a;
+            border: 1px solid #c7aa69;
+            cursor: pointer;
+            font-family: Georgia, 'Times New Roman', serif;
+            letter-spacing: 1px;
+            font-size: 12px;
+            transition: 0.3s;
+        }
+
+        #musicButton:hover {
+            background: #c7aa69;
+            color: #080808;
+            box-shadow: 0 0 20px rgba(199,170,105,0.25);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            section {
+                padding: 80px 7%;
+            }
+
+            .photos {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+            }
+
+            .letter-box {
+                padding: 35px 22px;
+            }
+
+            .letter-box p {
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            #musicButton {
+                top: 12px;
+                right: 12px;
+                padding: 10px 12px;
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BINTANG -->
+    <div class="stars" id="stars"></div>
+
+    <!-- MUSIK ULANG TAHUN -->
+    <audio id="bgMusic" loop autoplay>
+        <source src="Until I Found You - Stephen Sanchez - Cover (Violin) - ItsAMoney.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicButton" onclick="toggleMusic()">
+        ♫ PUTAR LAGU
+    </button>
+
+
+    <!-- =========================
+         OPENING
+    ========================== -->
+
+    <section class="opening">
+
+        <div class="small-title">
+            A Little Something For You
+        </div>
+
+        <h1>
+            Alya Alfia<br>
+            <span class="gold">Rahmah</span>
+        </h1>
+
+        <div class="date">
+            08 OCTOBER
+        </div>
+
+        <p class="intro">
+            Ada sedikit ucapan nich<br>
+            khusus buat seseorang yang sangat amat penting buat aku
+        </p>
+
+        <a href="#birthday" class="btn">
+            BUKA HADIAH
+        </a>
+
+        <div class="scroll">
+            SCROLL DOWN
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BIRTHDAY
+    ========================== -->
+
+    <section class="birthday" id="birthday">
+
+        <div class="small-title">
+            Happy Birthday
+        </div>
+
+        <h2>
+            Selamat Ulang Tahun,
+            <span class="gold">Sayang.</span>
+        </h2>
+
+        <p class="birthday-message">
+            Aku tau banget kalo sebenernya apa yg udah aku buat ini sangat amat terlambat. tapi ya paling ngga ini yg bisa aku buat dan aku kasih buat kamu sayang.
+        </p>
+
+        <p class="birthday-message">
+            Semoga di umur kamu yang baru ini,
+            lebih banyak kebahagiaan dan keberkahan yang datang,
+            lebih banyak impian dan keinginan kamu yang tercapai,
+            dan lebih banyak lagi alasan buat kamu selalu seneng dan bahagia truss!!
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
+    <section class="gallery">
+
+        <div class="small-title">
+            Our Memories
+        </div>
+
+        <h2>
+            A Few Moments
+            <span class="gold">With You</span>
+        </h2>
+
+        <p>
+            Kadang kita ngga perlu rencana yang spesial. bisa ketemu, jalan, dan main bareng aja udah cukup buat jadi cerita dan kenangan sm kamu.
+        </p>
+
+        <div class="photos">
+
+            <!-- GANTI FOTO DI SINI -->
+
+            <div class="photo">
+                <img src="img/alyaa3.jpeg" alt="Kenangan 1">
+            </div>
+
+            <div class="photo">
+                <img src="img/alyaa.jpeg" alt="Kenangan 2">
+            </div>
+
+            <div class="photo">
+                <img src="img/alyaa4.jpeg" alt="Kenangan 3">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LETTER
+    ========================== -->
+
+    <section class="letter">
+
+        <div class="small-title">
+            A Letter For You
+        </div>
+
+        <div class="letter-box">
+
+            <div class="heart">
+                ♡
+            </div>
+
+            <p>
+                Alya Alfia Rahmah
+            </p>
+
+            <p>
+                Mungkin kamu udah sering banget denger aku bilang hal ini
+                ke kamu secara langsung.
+                Tapi mungkin sekarang terasa lebih spesial dikitt karna aku bikin dalam bentuk web ini, aku pengen kamu tau
+                kalo aku selalu bersyukur sm tuhan karna pernah dipertemukan
+                dengan kamu sampai detik ini. bahkan kamu salah satunya alesan aku buat bisa bertahan sampe sekarang dan seterusnya
+            </p>
+
+            <p>
+                Terima kasih yaa cantikk udah selalu bisa jadi wanita yg sangat amat kuat,
+                terima kasih karna kamu udah bisa kuat dan bertahan sejauh ini, semakin kamu bertambah umur dan dewasa, pasti semakin sulit jg kan ujian dan cobaannya sayang?
+                But, its okay sayangkuu karna kamu selalu dikelilingin sm orng yg baik dan sayang sm kamu, dan salah satunya itu akuu hehe.
+            </p>
+
+            <p>
+                Aku ngga berharap hidup kamu
+                selalu berjalan dengan sempurna. karna mau gimanapun balik lagi, kita cuma manusia yg pasti selalu punya kekurangan.
+                Aku cuma berharap kamu selalu punya
+                alasan untuk bahagia,
+                selalu punya kekuatan disaat kamu lagi cape,
+                dan selalu dikelilingi orang-orang
+                yang sayanggggg bangett sm kamu.
+            </p>
+
+            <p>
+                Dan kalau aku boleh berharap sedikittt lebih jauh,
+                semoga aku masih bisa menjadi bagian
+                dari banyak cerita indah, seneng, dan bahagia nya kamu
+                di tahun-tahun berikutnya.
+            </p>
+
+            <div class="signature">
+                With love,<br>
+                Bori ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SECRET MESSAGE
+    ========================== -->
+
+    <section class="secret">
+
+        <div class="small-title">
+            One More Thing
+        </div>
+
+        <h2>
+            Ada pesan yg terakhir nich sayang
+            <span class="gold"></span>
+        </h2>
+
+        <p>
+            Jangan ditutup dulu yaaa...
+        </p>
+
+        <button class="btn" onclick="showSecret()">
+            BUKA PESAN RAHASIA
+        </button>
+
+        <div id="secretMessage">
+
+            <div class="heart">
+                ❤️
+            </div>
+
+            <p>
+                Happy Birthday, My Everything.
+            </p>
+
+            <p>
+                Semoga senyum kamu selalu punya alasan,
+                semoga langkah kamu selalu dipermudah dan dilancarkan,
+                dan semoga semua hal baik
+                menemukan jalannya menuju kamu.
+            </p>
+
+            <p>
+                Aku mungkin bukan orang yang sempurna,
+                tapi aku janji ke diri aku sendiri kalo aku akan terus berusaha buat jadi yg terbaik untuk kamu. dan aku jg berharap
+                semoga kamu mendapatkan hal-hal terbaik
+                dalam hidup kamu.
+            </p>
+
+            <p class="gold">
+                I Love You in Every Universe
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        Made with love by Bori ❤️
+        <br><br>
+        For Alya Alfia Rahmah
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* Membuat bintang */
+
+        const starsContainer = document.getElementById("stars");
+
+        for (let i = 0; i < 100; i++) {
+
+            const star = document.createElement("div");
+
+            star.classList.add("star");
+
+            star.style.left = Math.random() * 100 + "%";
+            star.style.top = Math.random() * 100 + "%";
+
+            star.style.animationDelay =
+                Math.random() * 3 + "s";
+
+            starsContainer.appendChild(star);
+        }
+
+
+        /* Pesan rahasia */
+
+        function showSecret() {
+
+            const message =
+                document.getElementById("secretMessage");
+
+            message.style.display = "block";
+
+            createConfetti();
+
+            setTimeout(() => {
+
+                message.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+            }, 200);
+
+        }
+
+
+        /* Confetti sederhana */
+
+        function createConfetti() {
+
+            for (let i = 0; i < 80; i++) {
+
+                const confetti =
+                    document.createElement("div");
+
+                confetti.style.position = "fixed";
+                confetti.style.width = "7px";
+                confetti.style.height = "7px";
+                confetti.style.background =
+                    Math.random() > 0.5
+                        ? "#d6b66a"
+                        : "#ffffff";
+
+                confetti.style.left =
+                    Math.random() * 100 + "vw";
+
+                confetti.style.top = "-10px";
+
+                confetti.style.zIndex = "9999";
+
+                confetti.style.pointerEvents = "none";
+
+                document.body.appendChild(confetti);
+
+
+                const duration =
+                    Math.random() * 2500 + 2000;
+
+                confetti.animate(
+                    [
+                        {
+                            transform:
+                                "translateY(0) rotate(0deg)",
+                            opacity: 1
+                        },
+                        {
+                            transform:
+                                `translateY(110vh) rotate(${Math.random() * 720}deg)`,
+                            opacity: 0
+                        }
+                    ],
+                    {
+                        duration: duration,
+                        easing: "linear"
+                    }
+                );
+
+
+                setTimeout(() => {
+                    confetti.remove();
+                }, duration);
+            }
+
+        }
+
+
+        /* Musik ulang tahun */
+
+        
+const bgMusic = document.getElementById("bgMusic");
+const musicButton = document.getElementById("musicButton");
+
+bgMusic.volume = 0.7;
+
+function startMusic() {
+    bgMusic.play().then(() => {
+        musicButton.innerHTML = "♫ JEDA LAGU";
+    }).catch(() => {
+        musicButton.innerHTML = "♫ PUTAR LAGU";
+    });
+}
+
+window.addEventListener("load", () => {
+    startMusic();
+});
+
+function toggleMusic() {
+    if (bgMusic.paused) {
+        startMusic();
+    } else {
+        bgMusic.pause();
+        musicButton.innerHTML = "♫ PUTAR LAGU";
+    }
+}
+
+document.addEventListener("click", function startOnFirstClick() {
+    if (bgMusic.paused) {
+        startMusic();
+    }
+}, { once: true });
+
+document.addEventListener("touchstart", function startOnFirstTouch() {
+    if (bgMusic.paused) {
+        startMusic();
+    }
+}, { once: true });
+
+        
+
+        /* Update tombol jika musik berhenti atau dijeda */
+
+        bgMusic.addEventListener("pause", () => {
+            musicButton.innerHTML = "♫ PUTAR LAGU";
+        });
+
+        bgMusic.addEventListener("play", () => {
+            musicButton.innerHTML = "♫ JEDA LAGU";
+        });
+
+        /* Menampilkan error jika file musik tidak ditemukan */
+
+        bgMusic.addEventListener("error", () => {
+            musicButton.innerHTML = "♫ FILE LAGU ERROR";
+            console.error("File MP3 tidak ditemukan. Periksa nama dan lokasi file.");
+        });
+
+    </script>
+
+</body>
+</html>
